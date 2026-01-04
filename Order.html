@@ -1,0 +1,163 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" type="image/jpg" href="NavikBG-removebg-preview.png">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <script src="main.js"></script>
+        <script src="https://kit.fontawesome.com/baf98036f6.js" crossorigin="anonymous"></script>
+        <title>Order Online Now! With Navik.</title>
+    </head>
+<body onload="Body()">
+    <div class="topnav">
+        <a href="Home.html">Home</a>
+        <a class="active" href="Order.html">Order</a>
+        <a href="Contact.html">Contact</a>
+        <a href="About.html">About</a>
+    </div>
+    <div class="container">
+        <h2>Order Your Favorite Product!</h2>
+        <form action="/submit_order" method="post">
+            <div class="form-group">
+                <label for="productType">Product Type:</label>
+                <select class="form-control" id="productType" name="productType" required>
+                    <option value="T-shirt"> <img src=""> T-shirt</option>
+                    <option value="Caps"> <img src=""> Caps</option>
+                    <option value="Mugs"><img src=""> Mugs</option>
+                    <option value="Hoodies"><img src=""> Hoodies</option>
+                    <option value="Totebags"><img src=""> Totebags</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="quantity">Quantity:</label>
+                <input type="number" class="form-control" id="quantity" name="quantity" min="1" required>
+            </div>
+            <div class="form-group">
+                <label for="size">Size:</label>
+                <select class="form-control" id="size" name="size" required>
+                    <option value="Small">Small</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Large">Large</option>
+                    <option value="X-Large">X-Large</option>
+                </select>
+                </div>
+            <div class="form-group">
+                <label for="color">Color:</label>
+              <select class="form-control" id="color" name="color" required>
+                 <option value="Red">Red</option>
+                 <option value="Blue">Blue</option>
+                 <option value="Green">Green</option>
+                 <option value="Yellow">Yellow</option>
+                 <option value="Black">Black</option>
+                 <option value="White">White</option>
+             </select>
+            </div>
+            <div class="form-group">
+                <label for="customDesign">Design (Optional):</label>
+                <br><br> 
+
+                <button id="PreMadeBtn" class="btn btn-primary" style="margin-left: 20px; margin-right: 20px;" type="button" >Pre-Made Designs</button>
+                <button id="CustomBtn" class="btn btn-secondary" type="button">Upload Custom Design</button>
+                <br><br>
+                 
+            </div>
+            <button type="submit" class="btn btn-success">Place Order</button> 
+            <button type="reset" class="btn btn-danger">Cancel Order</button>
+            <button type="button" class="btn btn-primary" id="TAC">Terms and Conditions</button>
+        </form>
+    </div>
+    
+    <div id="PMDModal" class="modal"> 
+        
+      <div class="modal-content">
+        <div class="modal-header">
+            <span class="close">&times;</span>
+            <center>
+            <h2>Pre-Made Designs</h2>
+            *Choose one only, choices will be discarded if more than one is chosen*
+            </center>
+        </div>
+        <div class="modal-body">
+            <form>
+                <label for="PMD">Select a Pre-Made Design:</label>
+                <select id="PMD" class="form-control">
+                    <option value="Design1">Design 1 <img src="" alt="Design 1" width="100"></option>
+                    <option value="Design2">Design 2 <img src="" alt="Design 2" width="100"></option>
+                    <option value="Design3">Design 3 <img src="" alt="Design 3" width="100"></option>
+                    <option value="Design4">Design 4 <img src="" alt="Design 4" width="100"></option>
+                    <option value="Design5">Design 5 <img src="" alt="Design 5" width="100"></option>
+                </select>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <center>
+            <h3>Happy Shopping!</h3>
+            <button type="submit" class="btn btn-success" onclick="">Place Order</button>
+            </center>
+        </div>
+      </div>  
+    </div>
+ 
+    <div id="CMDModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        
+        <div class="modal-header">
+            <h2>Custom Designs</h2>
+        </div>
+        <div class="modal-body">
+            <center> 
+            <label for="customDesignUpload">Upload Your Custom Design:</label>
+            <br><br>
+            <button id="up" class="icon upload">
+           <input type="file" id="customDesignUpload" name="customDesignUpload" accept="image/*" required > 
+           </button>
+            <br><br><br>
+            <img id="previewImage" src="" alt="Preview Image" style="max-width: 300px; display: none;">
+            </center>
+        </div>
+        <div class="modal-footer">
+            <center>
+            <h3>Happy Shopping!</h3>
+            <button type="submit" class="btn btn-success">Place Order</button>
+            </center>
+        </div>
+      </div> 
+    </div>
+    
+     <div id="TACModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        
+        <div class="modal-header">
+            <center>
+            <h2>Terms & Conditions</h2>
+            </center>
+        </div>
+        <div class="modal-body">
+          <p>This modal contains the terms and conditions for the order, and you agree to them if you proceed with the payment
+            Just to keep it simple, so you don't get bored out of your mind reading a wall of text, here are some simple terms and conditions:
+            <ol>
+                <li>All Pre-made designs are essentially copyrighted by us and others, so we own some of them.</li>
+                <li>Custom designs uploaded by users are their own responsibility, and we do not take any liability for copyright infringements.</li>
+                <li>We will not accept any inappropriate designs or designs that infringe upon the rights of others, such as nudity and etc. </li>
+                <li>All sales are final, no returns or exchanges unless the product is defective or damaged within 7 days with evidence.</li>
+                <li>Delivery times may vary depending on your location and other factors beyond our control.</li>
+                <li> We reserve the right to cancel or modify orders at any time, without prior notice. (it will be applied a day after its announcement)</li>
+                <li> If anyone breaks our terms and conditions, we reserve the right to take legal action against them, and their order will be cancelled without refund.</li>
+                <li>By placing an order, you agree to our privacy policy and terms of service, and that you have read and understood them.</li>
+                <br><br><br>  
+            </ol>
+          </p>
+        </div>
+        <div class="modal-footer">
+            <center>
+            <h3>Happy Shopping!</h3>
+            <input id="TACcheckbox" type="checkbox" required class="form-control"> I have read and agree to the Terms and Conditions.
+            </center>
+        </div>
+      </div> 
+    </div>

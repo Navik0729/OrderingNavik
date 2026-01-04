@@ -1,0 +1,206 @@
+.Size{
+    text-align:center;
+    display:inline-block;
+    margin:20px;
+    font-family: 'Arial', sans-serif;
+    height:auto;
+    width:auto ;
+    border:2px solid #000;
+    background-color:#00000000;
+    font-size: 16px;
+    cursor:pointer;
+    text-overflow: ellipsis;
+    white-space: nowrap; 
+    overflow:hidden;
+}
+#Sizes input{
+    height: 20px;
+    width: 20px;
+    float:left;
+    
+}
+.Size:hover{
+      background-color: rgba(58, 58, 58, 0.205)
+}
+#Re:hover{
+    background-color: rgba(255, 0, 0, 0.514)
+}
+#Or:hover{
+    background-color: rgba(255, 136, 0, 0.514)
+}
+#Ye:hover{
+    background-color: rgba(255, 251, 0, 0.514)
+}
+#Gr:hover{
+    background-color: rgba(30, 255, 0, 0.514)
+}
+#Bl:hover{
+    background-color: rgba(0, 81, 255, 0.514)
+}
+#Pu:hover{
+    background-color: rgba(111, 0, 255, 0.514)
+}
+#Pi:hover{
+    background-color: rgba(255, 0, 255, 0.514)
+}
+#Bk:hover{
+    background-color: rgba(0, 0, 0, 0.514)
+}
+#Wh:hover{
+    background-color: rgba(255, 255, 255, 0.514)
+}
+.Color{
+    text-align:center;
+    display:inline-block;
+    margin:20px;
+    font-family: 'Arial', sans-serif;
+    height:auto;
+    width:11.1%;
+    border:2px solid #000;
+    background-color:#00000000;
+    font-size: 16px;
+    cursor:pointer;
+}
+#Colours input{
+    height: 20px;
+    width: 20px;
+    float:left;
+    
+}
+#SignIn{
+    height: 55%;
+    width:30%;
+    background-color: rgb(41, 43, 46);
+}
+.LoginBox{
+    height: max-content;
+    width:auto; 
+}
+#username{
+    margin:70px;
+}
+#password{
+    margin:-30px
+}
+.topnav{
+    overflow: hidden;
+    background-color: #333;
+    padding: 0px;
+  }
+  
+  .topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .topnav a:hover {
+    background-color: #a5a5a5;
+    color: black;
+    text-decoration: none;
+  }
+  
+  .topnav a.active {
+    background-color: #04AA6D;
+    color: white;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  width: 80%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s;
+  overflow:auto;
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {top:-300px; opacity:0} 
+  to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-header {
+  padding: 2px 16px;
+  background-color: #474747;
+  color: white;
+}
+
+.modal-body {padding: 2px 16px;}
+
+.modal-footer {
+  padding: 2px 16px;
+  background-color: #474747;
+  color: white;
+}
+#customDesignUpload::-webkit-file-upload-button{
+    background-color: #04AA6D ;
+    border-radius: 100%;
+    border: none;
+    text-decoration: none;
+    color:#00000000;
+    padding: 10px 20px;
+    cursor: pointer;
+    display:none;
+}
+.icon {
+  display: inline-block;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+}
+.upload::before {
+  content: "\f093";
+  font: var(--fa-font-solid);
+  size: medium;
+}
+#up{
+    border: none;
+    background-color: #04AA6D ;
+    width: 100px;
+}
+
