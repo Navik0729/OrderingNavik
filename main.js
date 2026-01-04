@@ -1,5 +1,6 @@
 function Body()
 {
+/// This is for the Pre-made Designs Modal ///
 const PremadeDesigns = document.getElementById('PMDModal');
 const openPMDButton = document.getElementById('PreMadeBtn');
 const closePMDButton = document.getElementsByClassName('close')[0];
@@ -11,12 +12,8 @@ openPMDButton.onclick = function() {
 closePMDButton.onclick = function() {
     PremadeDesigns.style.display = 'none';
 }
-window.onclick = function(event) {
-    if (event.target == PremadeDesigns) {
-        PremadeDesigns.style.display = 'none';
-    }
-}
 
+/// This is for the Custom Designs Modal ///
 const CustomDesigns = document.getElementById('CMDModal');
 const openCMDButton = document.getElementById('CustomBtn');
 const closeCMDButton = document.getElementsByClassName('close')[1];
@@ -28,12 +25,8 @@ openCMDButton.onclick = function() {
 closeCMDButton.onclick = function() {
     CustomDesigns.style.display = 'none';
 }
-window.onclick = function(event) {
-    if (event.target == CustomDesigns) {
-        CustomDesigns.style.display = 'none';
-    }
-}
 
+/// This is for the Terms and Conditions Modal ///
 const TAC = document.getElementById('TACModal');
 const openTACButton = document.getElementById('TAC');
 const closeTACButton = document.getElementsByClassName('close')[2];
@@ -45,9 +38,15 @@ openTACButton.onclick = function() {
 closeTACButton.onclick = function() {
     TAC.style.display = 'none';
 }
+// When the user clicks anywhere outside of the modal, close it
+const modals = document.querySelectorAll('.modal');
+
 window.onclick = function(event) {
-    if (event.target == TAC) {
-        TAC.style.display = 'none';
+  modals.forEach(modal => {
+    if (event.target === modal) {
+      modal.style.display = 'none';
     }
-}
+  });
+};
+
 }
